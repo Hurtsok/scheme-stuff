@@ -1,0 +1,8 @@
+(define (sumOfSquare a b c)
+ (cond ((or (and (> a b) (> b c))
+            (and (> a c) (> b c))) (+ (* a a) (* b b)))
+       ((or (and (> b a) (> c b))
+            (and (> b c) (> c a)))  (+ (* b b) (* c c)))
+       (else (+ (* a a) (* c c)))
+ )
+)
